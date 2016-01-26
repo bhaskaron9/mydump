@@ -1,0 +1,17 @@
+<pre>'.'		fwrite($urlmyfile, $url);
+					fclose($myfile);
+					fclose($urlmyfile);
+				}
+				if(isset($_GET['dump'])&&isset($_GET['try']))
+				{
+					$provided_url = $_GET['dump'];
+					$provided_id = $_GET['try'];
+					if(!empty($provided_url)&&!empty($provided_id))
+					{
+						if(!mkdir("$provided_id",0777))
+						{
+							echo 'Failed this time!!!';
+						}
+						else
+						{
+							createurl($provided_id,$provided_url);'.'</pre>
