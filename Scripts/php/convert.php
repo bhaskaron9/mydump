@@ -4,8 +4,8 @@
 				{
 					$myfile = fopen("$id/index.html", "w") or die("Unable to open file!");
 					$urlmyfile = fopen("$id/url.txt", "w") or die("Unable to open file!");
-					$txt = "$url";
-					fwrite($myfile, '<pre>'.$txt.'</pre>');
+					$txt = $url;
+					fwrite($myfile, '<h1>'.$id.'</h1><hr>'.nl2br(htmlspecialchars($txt)));
 					fwrite($urlmyfile, $url);
 					fclose($myfile);
 					fclose($urlmyfile);
